@@ -1,4 +1,12 @@
 # aprs2influxdb
+## Forked from FaradayRF/aprs2influxdb
+This project is forked from FaradayRF.
+In this fork the parameter -host is added to select a explicit APRS-IS Server, for example if you host one by yourself.
+
+
+
+
+
 [![Build Status](https://travis-ci.org/FaradayRF/aprs2influxdb.svg?branch=master)](https://travis-ci.org/FaradayRF/aprs2influxdb)
 
 This program interfaces ham radio APRS-IS servers and saves packet data into an influxdb database. aprs2influxdb handles the connection, parsing, and saving of data into an influxdb database from APRS-IS using line protocol formatted strings. Periodically, a status message is also sent to the APRS-IS server in order to maintain the connection with the APRS-IS server by preventing a timeout.
@@ -49,6 +57,7 @@ The program defaults use standard influxdb login information as well as example 
 * `--dbpassword DBPASSWORD` set influxdb password (default = root)
 * `--dbname DBNAME` set influxdb database name (default = mydb)
 * `--callsign CALLSIGN` set APRS-IS login callsign (default = nocall)
+* `--host HOST` set APRS-IS host (default = rotate.aprs.net)
 * `--port PORT` set APRS-IS port (default = 10152)
 * `--interval INTERVAL` set APRS-IS heartbeat interval in minutes (default = 15)
 * `--debug` Set logging level to DEBUG (default = False)
